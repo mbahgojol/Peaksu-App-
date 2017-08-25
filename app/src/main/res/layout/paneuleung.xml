@@ -23,7 +23,7 @@
                 android:id="@+id/myanimation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/paneleng1"
+                android:src="@drawable/peneuleung1"
                 android:layout_marginBottom="10dp"
                 android:layout_marginRight="10dp" />
 

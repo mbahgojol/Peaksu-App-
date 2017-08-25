@@ -169,7 +169,7 @@
                     android:layout_height="100dp"
                     android:layout_centerInParent="true"
                     android:background="@drawable/bg"
-                    android:drawableTop="@drawable/panolong"
+                    android:drawableTop="@drawable/paneleng"
                     android:onClick="klikTombolMenu"
                     android:text="panolong"
                     android:textStyle="bold" />
@@ -200,7 +200,7 @@
                     android:layout_height="100dp"
                     android:layout_centerInParent="true"
                     android:background="@drawable/bg"
-                    android:drawableTop="@drawable/paneleng"
+                    android:drawableTop="@drawable/panolong"
                     android:onClick="klikTombolMenu"
                     android:text="paneleng"
                     android:textStyle="bold" />

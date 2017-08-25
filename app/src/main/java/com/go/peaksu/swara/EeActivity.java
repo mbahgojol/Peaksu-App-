@@ -33,7 +33,7 @@ public class EeActivity extends AppCompatActivity implements OnGesturePerformedL
 
         this.gesture = (GestureOverlayView) findViewById(R.id.gestureOverlay);
         this.gesture.addOnGesturePerformedListener(this);
-        this.gLibrary = GestureLibraries.fromRawResource(this, R.raw.gestdasar);
+        this.gLibrary = GestureLibraries.fromRawResource(this, R.raw.gestswara);
         this.gLibrary.load();
         ImageView myAnimation = (ImageView) findViewById(R.id.myanimation);
         final AnimationDrawable myAnimationDrawable = (AnimationDrawable) myAnimation.getDrawable();
@@ -55,8 +55,8 @@ public class EeActivity extends AppCompatActivity implements OnGesturePerformedL
         ArrayList<Prediction> predictions = this.gLibrary.recognize(gesture);
         Builder ab = new Builder(this);
         if (predictions.size() <= 0 || ((Prediction) predictions.get(0)).score <= 3.0d) {
-            ab.setTitle("Maaf");
-            ab.setMessage("Salah, aksara yang anda tulis tidak tepat.");
+            ab.setTitle("Salah");
+            ab.setMessage("aksara yang anda tulis tidak tepat.");
             ab.setPositiveButton("Coba lagi", null);
             ab.show();
             return;
@@ -64,15 +64,15 @@ public class EeActivity extends AppCompatActivity implements OnGesturePerformedL
         String pn = ((Prediction) predictions.get(0)).name;
         if (pn.equals("ee") || pn.equals("eee") || pn.equals("eeee")) {
             ab = new Builder(this);
-            ab.setTitle("Bagus");
-            ab.setMessage("Benar, aksara yang anda tulis sudah tepat.");
+            ab.setTitle("Benar");
+            ab.setMessage("aksara yang anda tulis sudah tepat.");
             ab.setPositiveButton("OK", null);
             ab.show();
             return;
         }
         ab = new Builder(this);
-        ab.setTitle("Maaf");
-        ab.setMessage("Salah, aksara yang anda tulis tidak tepat.");
+        ab.setTitle("Salah");
+        ab.setMessage("aksara yang anda tulis tidak tepat.");
         ab.setPositiveButton("Coba lagi", null);
         ab.show();
     }

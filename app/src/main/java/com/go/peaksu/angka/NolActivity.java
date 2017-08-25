@@ -34,7 +34,7 @@ public class NolActivity extends AppCompatActivity implements OnGesturePerformed
 
         this.gesture = (GestureOverlayView) findViewById(R.id.gestureOverlay);
         this.gesture.addOnGesturePerformedListener(this);
-        this.gLibrary = GestureLibraries.fromRawResource(this, R.raw.gestdasar);
+        this.gLibrary = GestureLibraries.fromRawResource(this, R.raw.gestangka);
         this.gLibrary.load();
         ImageView myAnimation = (ImageView) findViewById(R.id.myanimation);
         final AnimationDrawable myAnimationDrawable = (AnimationDrawable) myAnimation.getDrawable();
@@ -56,22 +56,22 @@ public class NolActivity extends AppCompatActivity implements OnGesturePerformed
         ArrayList<Prediction> predictions = this.gLibrary.recognize(gesture);
         Builder ab = new Builder(this);
         if (predictions.size() <= 0 || ((Prediction) predictions.get(0)).score <= 3.0d) {
-            ab.setTitle("Maaf");
-            ab.setMessage("Salah, aksara yang anda tulis tidak tepat.");
+            ab.setTitle("Salah");
+            ab.setMessage("aksara yang anda tulis tidak tepat.");
             ab.setPositiveButton("Coba lagi", null);
             ab.show();
             return;
         }
         if (((Prediction) predictions.get(0)).name.equals("0")) {
             ab = new Builder(this);
-            ab.setTitle("Bagus");
-            ab.setMessage("Benar, aksara yang anda tulis sudah tepat.");
+            ab.setTitle("Benar");
+            ab.setMessage("aksara yang anda tulis sudah tepat.");
             ab.setPositiveButton("OK", null);
             ab.show();
         } else {
             ab = new Builder(this);
-            ab.setTitle("Maaf");
-            ab.setMessage("Salah, aksara yang anda tulis tidak tepat.");
+            ab.setTitle("Salah");
+            ab.setMessage("aksara yang anda tulis tidak tepat.");
             ab.setPositiveButton("Coba lagi", null);
             ab.show();
         }

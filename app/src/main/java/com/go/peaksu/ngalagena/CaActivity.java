@@ -57,20 +57,20 @@ public class CaActivity extends AppCompatActivity implements OnGesturePerformedL
         Builder ab;
         if (predictions.size() <= 0 || ((Prediction) predictions.get(0)).score <= 3.0d) {
             ab = new Builder(this);
-            ab.setTitle("Maaf");
-            ab.setMessage("Salah, aksara yang anda tulis tidak tepat.");
+            ab.setTitle("Salah");
+            ab.setMessage("aksara yang anda tulis tidak tepat.");
             ab.setPositiveButton("Coba lagi", null);
             ab.show();
         } else if (((Prediction) predictions.get(0)).name.equals("ca")) {
             ab = new Builder(this);
-            ab.setTitle("Bagus");
-            ab.setMessage("Benar, aksara yang anda tulis sudah tepat.");
+            ab.setTitle("Benar");
+            ab.setMessage("aksara yang anda tulis sudah tepat.");
             ab.setPositiveButton("OK", null);
             ab.show();
         } else {
             ab = new Builder(this);
-            ab.setTitle("Maaf");
-            ab.setMessage("Salah, aksara yang anda tulis tidak tepat.");
+            ab.setTitle("Salah");
+            ab.setMessage("aksara yang anda tulis tidak tepat.");
             ab.setPositiveButton("Coba lagi", null);
             ab.show();
         }
